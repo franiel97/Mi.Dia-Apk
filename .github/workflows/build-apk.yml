@@ -14,13 +14,22 @@ jobs:
       MIDIA_VERSION_CODE: ${{ github.event.inputs.version_code || github.run_number }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
-        with: { node-version: 22 }
+        with:
+          node-version: 22
+
       - uses: actions/setup-java@v4
-        with: { distribution: temurin, java-version: 21 }
-      - uses: android-actions/setup-android@v3
-      - run: npm install
-      - run: npx cap sync android
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Instalar Dependências do Node
+        run: npm install
+
+      - name: Sincronizar Capacitor com Android
+        run: npx cap sync android
+
       - name: Restaurar keystore (se configurada)
         env:
           KS_B64: ${{ secrets.MIDIA_KEYSTORE_BASE64 }}
@@ -29,15 +38,22 @@ jobs:
             echo "$KS_B64" | base64 -d > "$RUNNER_TEMP/midia.jks"
             echo "MIDIA_KEYSTORE_PATH=$RUNNER_TEMP/midia.jks" >> $GITHUB_ENV
           fi
+
       - name: Build debug APK (teste)
+        # O ANDROID_HOME garante que o Gradle use o SDK nativo da máquina do GitHub
+        env:
+          ANDROID_HOME: /usr/local/lib/android/sdk
         run: cd android && chmod +x gradlew && ./gradlew assembleDebug
+
       - name: Build AAB + APK release (Play Store)
         if: ${{ env.MIDIA_KEYSTORE_PATH != '' }}
         env:
+          ANDROID_HOME: /usr/local/lib/android/sdk
           MIDIA_KEYSTORE_PASSWORD: ${{ secrets.MIDIA_KEYSTORE_PASSWORD }}
           MIDIA_KEY_ALIAS: ${{ secrets.MIDIA_KEY_ALIAS }}
           MIDIA_KEY_PASSWORD: ${{ secrets.MIDIA_KEY_PASSWORD }}
         run: cd android && ./gradlew bundleRelease assembleRelease
+
       - uses: actions/upload-artifact@v4
         with:
           name: mi-dia-android
