@@ -1,0 +1,9 @@
+/* Mi.Día – Exclusão em massa */
+/* Exclusão em massa: o card some a partir de pontos aleatórios (vale para todos os temas) */
+@property --fx-r{syntax:'<percentage>';inherits:true;initial-value:0%}
+.note.fx-mass{--x1:50%;--y1:50%;--x2:50%;--y2:50%;--x3:50%;--y3:50%;pointer-events:none;
+  -webkit-mask-image:radial-gradient(circle at var(--x1) var(--y1),transparent var(--fx-r),#000 calc(var(--fx-r) + 14%)),radial-gradient(circle at var(--x2) var(--y2),transparent var(--fx-r),#000 calc(var(--fx-r) + 14%)),radial-gradient(circle at var(--x3) var(--y3),transparent var(--fx-r),#000 calc(var(--fx-r) + 14%));
+  mask-image:radial-gradient(circle at var(--x1) var(--y1),transparent var(--fx-r),#000 calc(var(--fx-r) + 14%)),radial-gradient(circle at var(--x2) var(--y2),transparent var(--fx-r),#000 calc(var(--fx-r) + 14%)),radial-gradient(circle at var(--x3) var(--y3),transparent var(--fx-r),#000 calc(var(--fx-r) + 14%));
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+  animation:fx-mass-hole var(--fx-dur,600ms) cubic-bezier(.45,.05,.55,.95) forwards!important;transition:none!important}
+@keyframes fx-mass-hole{0%{--fx-r:0%;opacity:1;transform:none}60%{opacity:1}100%{--fx-r:130%;opacity:0;transform:scale(.97)}}

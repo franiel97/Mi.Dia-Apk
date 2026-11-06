@@ -1,0 +1,11 @@
+/* Mi.Día – Página */
+/* Ocupa sempre a tela toda: sem largura máxima e com a altura preenchida pelo quadro/calendário */
+html{height:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+.wrap{flex:1 0 auto;display:flex;flex-direction:column;width:100%;max-width:none;margin:0}
+.board,.calendar,.cal-grid{flex:1 1 auto}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nav button,.look-btn,.fchip,.primary,.mode-opt{font-family:var(--font-btn);font-size:var(--btn-size);text-transform:var(--btn-case);letter-spacing:var(--btn-track)}

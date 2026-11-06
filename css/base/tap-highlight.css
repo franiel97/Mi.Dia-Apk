@@ -1,0 +1,2 @@
+/* Mi.Día – Realce de toque */
+*,*::before,*::after{-webkit-tap-highlight-color:transparent}button,a,[role=button],label,select,summary{touch-action:manipulation}

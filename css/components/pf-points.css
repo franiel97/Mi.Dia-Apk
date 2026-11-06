@@ -1,0 +1,4 @@
+/* Mi.Día – perfil: resumo de pontos e abas do histórico */
+.pf-pts{display:flex;justify-content:space-between;gap:10px;width:100%;margin:10px 0;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:transparent;color:inherit;font:inherit;font-weight:600;cursor:pointer;text-align:left}
+.pf-pts:hover{border-color:var(--accent,currentColor)}
+.pf-tabs{display:flex;gap:8px;margin:8px 0}

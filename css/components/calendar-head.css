@@ -1,0 +1,18 @@
+/* Mi.Día – Calendário: cabeçalho */
+.calendar{display:flex;flex-direction:column;gap:10px}
+.cal-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 10px;background:var(--hud),var(--panel);border:var(--b-width) var(--b-style) var(--line);border-radius:var(--r-panel)}
+.cal-head button{font-family:var(--font-btn);font-size:var(--btn-size);text-transform:var(--btn-case);letter-spacing:var(--btn-track);color:var(--ink);background:var(--field);border:var(--ctl-b) solid var(--line);border-radius:var(--r-ctl);min-height:38px;padding:8px 14px}
+.cal-head .arrow{width:42px;padding:0;font-size:20px;line-height:1}
+.cal-head button:hover:not(:disabled){border-color:var(--muted)}
+.cal-head button:disabled{opacity:.5;cursor:default}
+:root[data-skin="fofo"] .cal-head button{transition:transform .22s cubic-bezier(.3,1.6,.5,1)}
+:root[data-skin="fofo"] .cal-head button:hover:not(:disabled){transform:scale(1.06)}
+:root[data-skin="fofo"] .cal-head button:active:not(:disabled){transform:scale(.94)}
+:root[data-skin="fofo"] .cal-label::before{content:"\2661\FE0E ";color:var(--accent)}
+:root[data-skin="fofo"] .cal-label::after{content:" \2661\FE0E";color:var(--accent)}
+:root[data-skin="tech"] .cal-head button:hover:not(:disabled){box-shadow:0 0 0 1px var(--accent)}
+:root[data-skin="tech"] .cal-label::before{content:"// ";color:var(--accent)}
+:root[data-skin="glass"] .cal-head{-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);box-shadow:var(--glass-shadow)}
+:root[data-skin="glass"] .cal-head button{-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);box-shadow:var(--glass-shadow);transition:transform .45s var(--spring),box-shadow .3s ease}
+:root[data-skin="glass"] .cal-head button:hover:not(:disabled){transform:scale(1.06)}
+:root[data-skin="glass"] .cal-head button:active:not(:disabled){transform:scale(.94)}

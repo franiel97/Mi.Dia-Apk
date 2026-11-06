@@ -1,0 +1,22 @@
+/* Mi.Día – Filtros */
+/* Filtros */
+.filters{display:contents}
+.filters[hidden]{display:none!important}
+.nav{position:relative}
+.filters-toggle{display:inline-flex;align-items:center;gap:6px;flex:none}
+@media (max-width:640px){.filters-toggle{gap:0}.filters-toggle .ft-txt{display:none}}
+.filters-toggle[aria-expanded="true"],.filters-toggle.has-filter{border-color:var(--accent);color:var(--accent)}
+.ft-badge{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:11px;font-weight:700;line-height:1}
+.ft-badge[hidden]{display:none}
+.filters-body{display:none;position:absolute;left:0;bottom:calc(100% + 6px);z-index:60;width:min(460px,100%);grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:10px;background:var(--bg);background:color-mix(in srgb,var(--bg) 94%,transparent);border:var(--ctl-b) solid var(--line);border-radius:var(--r-item);box-shadow:0 14px 32px rgba(0,0,0,.28)}
+.filters.open .filters-body{display:grid}
+.filters-body .fchip{width:100%;padding:6px 8px;text-align:center;line-height:1.15}
+.filters-body .filters-label{grid-column:1/-1;margin:0 0 2px 2px}
+.filters-body .filter-status{grid-column:1/-1;margin:2px 2px 0;font-size:12.5px;text-align:left}
+.filters-body .filter-status:empty{display:none}
+.filters-label{margin-right:2px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.fchip{background:var(--panel);border:var(--ctl-b) solid var(--line);border-radius:var(--r-ctl);padding:6px 12px;min-height:36px;font-weight:500}
+.fchip:hover{border-color:var(--muted)}
+.fchip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.filter-status{margin-left:auto;color:var(--muted);font-family:var(--font-data);font-size:13px;font-variant-numeric:tabular-nums}
+.col-body[data-empty="filtro"]:empty::before{content:"Nenhum card neste filtro"}

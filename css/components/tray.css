@@ -1,0 +1,49 @@
+/* Mi.Día – Bandeja de cards */
+/* Bandeja de cards */
+.tray{background:var(--hud),var(--panel);border:var(--b-width) var(--b-style) var(--line);border-radius:var(--r-panel);padding:14px 16px 16px;margin-bottom:16px;display:flex;flex-direction:column;gap:12px}
+.tray.over-remove{outline:2px dashed var(--danger);outline-offset:-2px}
+.tray-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+h2{font-family:var(--font-display);font-weight:700;font-size:var(--h2-size);letter-spacing:var(--h2-track);text-transform:var(--h2-case);margin:0}
+.tray.cards-hidden #chips,.tray.cards-hidden .hint-default{display:none}
+.tray.cards-hidden .tray-head{align-items:center}
+#cards-toggle{margin-left:auto}
+.tray-head .count{color:var(--muted);font-family:var(--font-data);font-size:13px;font-variant-numeric:tabular-nums}
+.hint{margin:0;color:var(--muted);font-size:13px;flex:1 1 280px;min-width:0}
+.hint-remove,.hint-touch{display:none}
+@media (pointer:coarse){.hint-touch{display:inline}}
+body.drag-move .hint-default{display:none}
+body.drag-move .hint-remove{display:inline;color:var(--danger);font-weight:600}
+
+#new-card{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+#cards-head{align-items:center;gap:4px 10px}
+#card-title{flex:1 1 240px;min-width:0;background:var(--field);border:var(--ctl-b) solid var(--line);border-radius:var(--r-ctl);padding:9px 14px}
+#card-title::placeholder{color:var(--muted)}
+.tones{display:flex;flex-wrap:wrap;align-items:center;gap:8px;border:0;margin:0;padding:0;min-width:0}
+.sw{position:relative;width:26px;height:26px;border-radius:var(--r-sw);background:var(--tint);box-shadow:inset 0 0 0 1px var(--edge);cursor:pointer;flex:none}
+.sw input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.sw:has(input:checked){box-shadow:inset 0 0 0 1px var(--edge),0 0 0 2px var(--panel),0 0 0 4px var(--ink)}
+.sw:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:4px}
+.sw-new{order:99;background:conic-gradient(#e53935,#fdd835,#43a047,#1e88e5,#8e24aa,#e53935)}
+.sw-new::after{content:"+";position:absolute;inset:6px;border-radius:var(--r-sw);background:var(--panel);color:var(--ink);display:grid;place-items:center;font-size:13px;font-weight:700;line-height:1;pointer-events:none}
+.primary{background:var(--accent);color:var(--accent-ink);border:0;border-radius:var(--r-ctl);padding:9px 18px;font-weight:600;min-height:38px}
+.primary:hover{filter:brightness(1.08)}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;max-height:176px;overflow-y:auto;padding:4px 2px 6px}
+.empty{margin:0;color:var(--muted);font-size:14px}
+
+/* cards na bandeja e nos dias */
+.tone-amarelo{--tint:var(--c-amarelo)}
+.tone-rosa{--tint:var(--c-rosa)}
+.tone-azul{--tint:var(--c-azul)}
+.tone-verde{--tint:var(--c-verde)}
+.tone-lilas{--tint:var(--c-lilas)}
+.tone-laranja{--tint:var(--c-laranja)}
+.note{
+  background:var(--tint);color:var(--card-ink);border:var(--note-border);border-radius:var(--r-note);
+  box-shadow:var(--note-shadow);clip-path:var(--note-clip);
+  cursor:grab;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;
+}
+.chip{display:flex;align-items:center;gap:4px;padding:6px 6px 6px 6px;max-width:100%}
+.chip .t{min-width:0;overflow-wrap:anywhere;font-weight:500;padding-right:2px}
+.icon{flex:none;width:22px;height:22px;display:grid;place-items:center;background:transparent;border:0;border-radius:var(--r-icon);color:inherit;opacity:.7;font-size:16px;line-height:1}
+.icon:hover{opacity:1;background:color-mix(in srgb,currentColor 14%,transparent)}

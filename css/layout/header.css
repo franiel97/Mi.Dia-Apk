@@ -1,0 +1,26 @@
+/* Mi.Día – Cabeçalho */
+/* Cabeçalho */
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:16px}
+.brand-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px}
+h1{font-family:var(--font-display);font-weight:800;font-size:var(--h1-size);letter-spacing:var(--h1-track);text-transform:var(--h1-case);line-height:1.05;margin:0;text-wrap:balance}
+.week{margin:4px 0 0;color:var(--muted);font-family:var(--font-data);font-variant-numeric:tabular-nums;padding:8px}
+.tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px}
+.nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.nav button,.look-btn{background:var(--panel);border:var(--ctl-b) solid var(--line);border-radius:var(--r-ctl);padding:8px 14px;min-height:38px}
+.nav button:hover:not(:disabled),.look-btn:hover{border-color:var(--muted)}
+.nav button:disabled{opacity:.5;cursor:default}
+.nav .arrow{padding-inline:12px;font-size:18px;line-height:1}
+.nav .warn{color:var(--danger);border-color:var(--danger)}
+
+button#copy-week{margin-left:auto}
+
+/* Detalhes de cada tema no cabeçalho */
+.deco{display:none;align-items:center;gap:6px}
+:root[data-skin="fofo"] .deco-fofo{display:inline-flex;color:var(--accent)}
+.deco-fofo svg{display:block}
+.deco-fofo .s-big{width:24px;height:24px}
+.deco-fofo .s-mid{width:16px;height:16px;opacity:.65}
+.deco-fofo .s-small{width:12px;height:12px;opacity:.45}
+.led{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--drop-bg);animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px transparent}}
+.sys{color:var(--accent);font-weight:700}

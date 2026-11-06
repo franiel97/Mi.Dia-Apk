@@ -1,0 +1,8 @@
+/* Mi.Día – login e perfil */
+.pf-head{display:flex;align-items:center;gap:12px}.pf-av{width:48px;height:48px;flex:none;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-weight:700;font-size:20px}
+.pf-id{min-width:0;flex:1;display:flex;flex-direction:column}.pf-id b,.pf-id span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pf-id span{font-size:.85em;color:var(--muted)}
+.pf-badge{flex:none;font-size:.75em;padding:3px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.pf-sep{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.85em}.pf-sep:before,.pf-sep:after{content:"";flex:1;height:1px;background:var(--line)}
+.pf-row{display:flex;gap:8px;flex-wrap:wrap}.pf-row>button{flex:1 1 auto}
+.pf-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}.pf-link{background:none;border:0;padding:4px;font:inherit;color:var(--muted);text-decoration:underline;cursor:pointer}.pf-link:hover{color:var(--ink)}
+.pf-more{display:flex;flex-direction:column;gap:10px}.pf-more>summary{cursor:pointer;color:var(--muted);margin-bottom:8px}

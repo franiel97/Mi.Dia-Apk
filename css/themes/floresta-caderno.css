@@ -1,0 +1,20 @@
+/* Mi.Día – Temas Floresta e Caderno: detalhes */
+:root[data-skin="floresta"] .col.today .col-head .dow::after{content:" \1F33F"}
+:root[data-skin="floresta"] .clock::before{content:"\1F343";width:auto;height:auto;border-radius:0;background:none;margin-right:6px}
+:root[data-skin="floresta"] .task > input[type=checkbox]{border-radius:50% 8px 50% 8px}
+:root[data-skin="caderno"] .col-body .task:nth-child(odd){transform:rotate(-.5deg)}
+:root[data-skin="caderno"] .col-body .task:nth-child(even){transform:rotate(.4deg)}
+:root[data-skin="caderno"] .col.today .col-head .dow::after{content:" \270E"}
+:root[data-skin="caderno"] h1,:root[data-skin="caderno"] h2,:root[data-skin="caderno"] .nav button{letter-spacing:.01em}
+:root[data-skin="caderno"] .task > input[type=checkbox]:checked::after{content:"\2713";font-weight:900}
+:is(:root[data-skin="floresta"],:root[data-skin="caderno"]) .fx-in{animation:fx-pop .45s cubic-bezier(.2,.9,.3,1.2)}
+:is(:root[data-skin="floresta"],:root[data-skin="caderno"]) .task.fx-done{animation:fx-soft-pulse .45s ease}
+:is(:root[data-skin="floresta"],:root[data-skin="caderno"]) .note.fx-out{animation:fx-fade-out .38s ease-in forwards}
+:is(:root[data-skin="floresta"],:root[data-skin="caderno"]) .board.fx-enter .col{animation:fx-col-in .45s cubic-bezier(.2,.8,.3,1) both;animation-delay:calc(var(--i) * 50ms)}
+:is(:root[data-skin="floresta"],:root[data-skin="caderno"]) .modal{animation:fx-modal-in .25s ease-out}
+:root[data-skin="floresta"] .dash{--dc:#3f9d5f;--dn:#d9a441;--dl:#d1553f}
+:root[data-skin="caderno"] .dash{--dc:#2e8b6a;--dn:#5b7fd1;--dl:#d9534f}
+.skin-opt[data-skin="floresta"]{--p1:#2f7d4f;--p2:#cddcb9;--p3:#f3e9a8}
+.skin-opt[data-skin="caderno"]{--p1:#2c4fa3;--p2:#f6f0e1;--p3:#ffc9d6}
+.gb-floresta{border-radius:4px 28px 4px 28px;border-color:#2f7d4f;box-shadow:0 14px 40px rgba(47,125,79,.35),0 0 0 6px rgba(127,214,154,.25)}.gb-floresta .gb-n{font-family:var(--font-display)}
+.gb-caderno{border-radius:4px;border:2px solid var(--accent);background:repeating-linear-gradient(transparent 0 27px,var(--deco) 27px 28px),var(--panel);transform-origin:center}.gb-caderno .gb-n{font-family:var(--font-display);font-size:34px}

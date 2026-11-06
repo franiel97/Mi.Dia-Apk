@@ -1,0 +1,76 @@
+/* Mi.Día – Tema Liquid Glass */
+/* ---------- Liquid Glass ---------- */
+:root[data-skin="glass"] body{background-image:none}
+:root[data-skin="glass"] body::before{content:"";position:fixed;inset:-25%;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(38% 34% at 18% 16%,color-mix(in srgb,var(--c-rosa) 90%,transparent),transparent 70%),
+    radial-gradient(34% 32% at 82% 14%,color-mix(in srgb,var(--c-azul) 95%,transparent),transparent 70%),
+    radial-gradient(36% 34% at 74% 86%,color-mix(in srgb,var(--c-verde) 85%,transparent),transparent 70%),
+    radial-gradient(34% 30% at 12% 84%,color-mix(in srgb,var(--c-lilas) 90%,transparent),transparent 70%),
+    radial-gradient(28% 26% at 50% 48%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 70%);
+  animation:fx-glass-drift 30s ease-in-out infinite alternate}
+@keyframes fx-glass-drift{0%{transform:translate3d(0,0,0) rotate(0deg) scale(1)}50%{transform:translate3d(3%,-2%,0) rotate(4deg) scale(1.08)}100%{transform:translate3d(-3%,3%,0) rotate(-3deg) scale(1.03)}}
+:root[data-skin="glass"] :is(.tray,.col,.set-card,.cal-cell,.cal-stat,.nf-item,.nav button,.look-btn,.fchip,.view-toggle,.clock,.picker,.look,.modal,.btn-alt,.mode-opt,.fx-opt,.skin-opt){
+  -webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);box-shadow:var(--glass-shadow)}
+:root[data-skin="glass"] :is(.picker,.look,.modal){background:color-mix(in srgb,var(--bg) 62%,transparent)}
+:root[data-skin="glass"] .modal-back{background:rgba(10,18,36,.28);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+:root[data-skin="glass"] .modal-actions{background:transparent}
+:root[data-skin="glass"] .note{
+  background:linear-gradient(155deg,rgba(255,255,255,.5),rgba(255,255,255,0) 58%),var(--tint);
+  background:linear-gradient(155deg,rgba(255,255,255,.5),rgba(255,255,255,0) 58%),color-mix(in srgb,var(--tint) 66%,transparent)}
+:root[data-skin="glass"] .tone-none{--tint:var(--field)}
+:root[data-skin="glass"] .note.tone-none{border:1px solid var(--edge)}
+:root[data-skin="glass"] .task.late{box-shadow:inset 0 0 0 2px var(--late),var(--note-shadow)}
+:root[data-skin="glass"] .task.ongoing{box-shadow:inset 0 0 0 2px var(--accent),var(--note-shadow)}
+:root[data-skin="glass"] .ghost{box-shadow:var(--note-shadow),0 18px 40px -10px rgba(10,25,60,.55);transform-origin:center}
+:root[data-skin="glass"] .fchip[aria-pressed="true"],
+:root[data-skin="glass"] .mode-opt[aria-pressed="true"],
+:root[data-skin="glass"] .fx-opt[aria-pressed="true"],
+:root[data-skin="glass"] .look-btn[aria-pressed="true"]{background:color-mix(in srgb,var(--accent) 78%,transparent);border-color:var(--edge);color:var(--accent-ink);box-shadow:inset 0 1px 1px rgba(255,255,255,.7),0 6px 18px -6px var(--accent)}
+:root[data-skin="glass"] .skin-opt[aria-pressed="true"]{border-color:var(--edge);box-shadow:var(--glass-shadow),0 0 0 2px var(--accent)}
+:root[data-skin="glass"] .primary{background:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,0) 60%),color-mix(in srgb,var(--accent) 85%,transparent);border:1px solid var(--edge);box-shadow:inset 0 1px 1px rgba(255,255,255,.75),0 8px 20px -8px var(--accent)}
+:root[data-skin="glass"] .primary.danger{background:color-mix(in srgb,var(--danger) 85%,transparent);color:#fff}
+:root[data-skin="glass"] .clock{font-weight:600;letter-spacing:.01em}
+:root[data-skin="glass"] .clock::before{box-shadow:0 0 0 3px var(--drop-bg);animation:fx-glass-breathe 2.8s ease-in-out infinite}
+:root[data-skin="glass"] .col.today{box-shadow:var(--glass-shadow),0 0 0 1.5px color-mix(in srgb,var(--accent) 70%,transparent)}
+:root[data-skin="glass"] .col-head{border-bottom-color:var(--line)}
+:root[data-skin="glass"] .late-tag{box-shadow:inset 0 1px 1px rgba(255,255,255,.4)}
+:root[data-skin="glass"] .task > input[type=checkbox]{-webkit-appearance:none;appearance:none;display:grid;place-items:center;width:21px;height:21px;border:1.5px solid var(--card-ink);border-radius:50%;background:rgba(255,255,255,.28);box-shadow:inset 0 1px 1px rgba(255,255,255,.7)}
+:root[data-skin="glass"] .task > input[type=checkbox]:checked{background:var(--card-ink)}
+:root[data-skin="glass"] .task > input[type=checkbox]:checked::after{content:"\2713\FE0E";color:var(--tint);font-size:12px;font-weight:700;line-height:1}
+:root[data-skin="glass"] .col-body:not([data-empty]):empty::before{content:"Solte um card aqui"}
+:root[data-skin="glass"] .col.today .col-head{position:relative;overflow:hidden}
+:root[data-skin="glass"] .col.today .col-head::after{content:"";position:absolute;top:0;bottom:0;left:0;width:30%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-120%);animation:fx-glass-sheen 6s ease-in-out 1s infinite;pointer-events:none}
+.fx-ring-glass{border-radius:50%;border-width:1.5px;border-color:rgba(255,255,255,.9);background:radial-gradient(circle at 50% 50%,transparent 55%,color-mix(in srgb,var(--accent) 30%,transparent) 100%);box-shadow:inset 0 0 12px rgba(255,255,255,.7),0 0 18px color-mix(in srgb,var(--accent) 45%,transparent)}
+.fx-bubble{border-radius:50%;border:1px solid rgba(255,255,255,.85);background:radial-gradient(circle at 30% 28%,rgba(255,255,255,.95),rgba(255,255,255,.25) 38%,transparent 60%),color-mix(in srgb,currentColor 34%,transparent);box-shadow:inset 0 0 6px rgba(255,255,255,.8),0 0 10px color-mix(in srgb,currentColor 50%,transparent)}
+@keyframes fx-glass-breathe{50%{box-shadow:0 0 0 7px transparent}}
+@keyframes fx-glass-sheen{0%,60%{transform:translateX(-120%)}100%{transform:translateX(480%)}}
+@keyframes fx-glass-in{0%{transform:scale(.82);opacity:0;filter:blur(10px)}55%{transform:scale(1.05);opacity:1;filter:blur(0)}78%{transform:scale(.985)}100%{transform:none}}
+@keyframes fx-glass-done{0%{transform:scale(1);filter:brightness(1)}35%{transform:scale(1.045);filter:brightness(1.25) saturate(1.2)}70%{transform:scale(.99)}100%{transform:none;filter:none}}
+@keyframes fx-glass-check{0%{transform:scale(0)}60%{transform:scale(1.35)}100%{transform:scale(1)}}
+@keyframes fx-glass-out{0%{transform:scale(1);opacity:1;filter:blur(0)}35%{transform:scale(1.04)}100%{transform:scale(.7);opacity:0;filter:blur(12px)}}
+@keyframes fx-glass-col{0%{opacity:0;transform:translateY(24px) scale(.96);filter:blur(10px)}100%{opacity:1;transform:none;filter:none}}
+@keyframes fx-glass-pop{0%{opacity:0;transform:scale(.92) translateY(10px);filter:blur(8px)}100%{opacity:1;transform:none;filter:none}}
+@keyframes fx-glass-late{50%{box-shadow:inset 0 0 0 2px var(--late),0 0 22px 2px color-mix(in srgb,var(--late) 55%,transparent)}}
+:root[data-skin="glass"] .fx-in{animation:fx-glass-in .7s var(--spring)}
+:root[data-skin="glass"] .task.fx-done{animation:fx-glass-done .7s ease}
+:root[data-skin="glass"] .task.fx-done > input[type=checkbox]:checked::after{animation:fx-glass-check .45s var(--spring)}
+:root[data-skin="glass"] .note.fx-out{animation:fx-glass-out .38s ease-in forwards}
+:root[data-skin="glass"] .board.fx-enter .col{animation:fx-glass-col .6s var(--spring) both;animation-delay:calc(var(--i) * 70ms)}
+:root[data-skin="glass"] :is(.look,.picker,.modal){animation:fx-glass-pop .4s var(--spring)}
+:root[data-skin="glass"] .task.late{animation:fx-glass-late 2.2s ease-in-out infinite}
+:root[data-skin="floresta"] .bell-btn.has-new .bell-padrao,:root[data-skin="caderno"] .bell-btn.has-new .bell-padrao,:root[data-skin="glass"] .bell-btn.has-new .bell-padrao{animation:fx-wiggle 2.4s ease-in-out infinite;transform-origin:50% 10%}
+:root[data-skin="glass"] .chip,
+:root[data-skin="glass"] .task,
+:root[data-skin="glass"] .sw,
+:root[data-skin="glass"] .cal-cell,
+:root[data-skin="glass"] :is(.nav button,.look-btn,.fchip,.primary,.mode-opt,.fx-opt,.skin-opt,.btn-alt){transition:transform .45s var(--spring),box-shadow .3s ease,background-color .3s ease,filter .3s ease}
+:root[data-skin="glass"] .chip:hover{transform:translateY(-2px) scale(1.04);filter:brightness(1.06)}
+:root[data-skin="glass"] .col-body .task:hover{transform:translateY(-1px) scale(1.02);filter:brightness(1.05)}
+:root[data-skin="glass"] .cal-cell:hover{transform:scale(1.04)}
+:root[data-skin="glass"] .sw:hover{transform:scale(1.18)}
+:root[data-skin="glass"] :is(.nav button,.look-btn,.fchip,.primary,.mode-opt,.fx-opt,.skin-opt,.btn-alt):hover:not(:disabled){transform:scale(1.05)}
+:root[data-skin="glass"] :is(.nav button,.look-btn,.fchip,.primary,.mode-opt,.fx-opt,.skin-opt,.btn-alt,.chip,.col-body .task):active:not(:disabled){transform:scale(.94)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  :root[data-skin="glass"] :is(.picker,.look,.modal){background:var(--bg)}
+}

@@ -1,0 +1,5 @@
+/* Mi.Día – Troca de telas */
+.view-toggle{display:inline-flex;gap:3px;background:var(--panel);border:var(--b-width) var(--b-style) var(--line);border-radius:var(--r-ctl);padding:3px;margin-bottom:10px}
+.vt-opt{border:0;background:transparent;border-radius:calc(var(--r-ctl) - 3px);padding:7px 16px;min-height:34px;font-family:var(--font-btn);font-size:var(--btn-size);color:var(--muted);cursor:pointer}
+.vt-opt[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.vt-opt:hover:not([aria-pressed="true"]){color:var(--ink)}

@@ -1,0 +1,42 @@
+/* Mi.Día – Tema Padrão: variáveis */
+:root{
+  /* tema Padrão */
+  --l-bg:#e8ecf0;--l-panel:#f5f7f9;--l-field:#ffffff;--l-ink:#17202a;--l-muted:#566373;--l-line:#c9d2db;--l-accent:#17695f;--l-accent-ink:#ffffff;--l-danger:#a63a3a;--l-drop-bg:rgba(23,105,95,.11);--l-edge:rgba(0,0,0,.22);--l-late:#b3261e;--l-late-ink:#ffffff;--l-card-ink:#1a2330;--l-deco:transparent;--l-c-amarelo:#fbe79a;--l-c-rosa:#f8c8d3;--l-c-azul:#bddcf6;--l-c-verde:#c5ebc8;--l-c-lilas:#dccdf4;--l-c-laranja:#fbd2ae;
+  --d-bg:#11161b;--d-panel:#1a2128;--d-field:#11161b;--d-ink:#e8edf2;--d-muted:#93a1b0;--d-line:#2f3a45;--d-accent:#4cc2b2;--d-accent-ink:#0b1a18;--d-danger:#e58a8a;--d-drop-bg:rgba(76,194,178,.14);--d-edge:rgba(255,255,255,.28);--d-late:#ff8a80;--d-late-ink:#3a0a07;--d-card-ink:#f1f4f7;--d-deco:transparent;--d-c-amarelo:#6a5a12;--d-c-rosa:#73344a;--d-c-azul:#26506f;--d-c-verde:#2a5c3b;--d-c-lilas:#4c3d75;--d-c-laranja:#75441d;
+  --font-display:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
+  --font-body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-data:var(--font-body);
+  --font-num:var(--font-display);
+  --font-btn:var(--font-body);
+  --r-panel:20px;
+  --r-col:20px;
+  --r-ctl:20px;
+  --r-item:20px;
+  --r-note:20px;
+  --r-pop:20px;
+  --r-icon:20px;
+  --r-tag:20px;
+  --r-sw:50%;
+  --b-width:1px;
+  --b-style:solid;
+  --ctl-b:1px;
+  --note-border:0 solid transparent;
+  --note-shadow:0 1px 1px rgba(0,0,0,.14),0 3px 7px rgba(0,0,0,.08);
+  --note-clip:none;
+  --hud:linear-gradient(transparent,transparent);
+  --bg-image:none;
+  --bg-size:auto;
+  --h1-size:30px;
+  --h1-track:-.025em;
+  --h1-case:none;
+  --h2-size:18px;
+  --h2-track:-.01em;
+  --h2-case:none;
+  --dow-case:none;
+  --dow-track:0;
+  --btn-case:none;
+  --btn-track:0;
+  --btn-size:15px;
+  /* tokens em uso: paleta clara */
+  --bg:var(--l-bg);--panel:var(--l-panel);--field:var(--l-field);--ink:var(--l-ink);--muted:var(--l-muted);--line:var(--l-line);--accent:var(--l-accent);--accent-ink:var(--l-accent-ink);--danger:var(--l-danger);--drop-bg:var(--l-drop-bg);--edge:var(--l-edge);--late:var(--l-late);--late-ink:var(--l-late-ink);--card-ink:var(--l-card-ink);--deco:var(--l-deco);--c-amarelo:var(--l-c-amarelo);--c-rosa:var(--l-c-rosa);--c-azul:var(--l-c-azul);--c-verde:var(--l-c-verde);--c-lilas:var(--l-c-lilas);--c-laranja:var(--l-c-laranja);
+}

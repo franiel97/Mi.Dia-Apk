@@ -1,0 +1,5 @@
+/* Mi.Día – Cores do Dash por tema */
+:root[data-skin="padrao"] .dash{--dc:#2a8c7a;--dn:#e0a944;--dl:#d65a4a}
+:root[data-skin="fofo"] .dash{--dc:#3dbd94;--dn:#b99bf0;--dl:#ef5f7e}
+:root[data-skin="tech"] .dash{--dc:#27e0cf;--dn:#3b8cff;--dl:#ff5470}
+:root[data-skin="glass"] .dash{--dc:#30c48d;--dn:#5ab0ff;--dl:#ff6b6b}

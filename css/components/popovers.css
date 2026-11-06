@@ -1,0 +1,13 @@
+/* Mi.Día – Pop-ups e véu */
+.cal-head{position:relative;z-index:70}.cal-menu{position:relative;display:inline-flex;z-index:71}.cal-head .arrow svg{display:block;margin:auto}.cal-pop{position:absolute;right:0;top:calc(100% + 6px);z-index:60;min-width:170px;padding:4px;background:var(--panel);border:var(--b-width) var(--b-style) var(--line);border-radius:var(--r-item);box-shadow:0 8px 24px rgba(0,0,0,.25)}.cal-pop[hidden]{display:none}.modal-back{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+body:has(.filters.open,.cal-pop:not([hidden]),.color-pop,.day-pop)::before{content:"";position:fixed;inset:0;z-index:950;pointer-events:none;background:color-mix(in srgb,var(--bg) 30%,transparent);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);animation:veil-in .18s ease-out}
+body:has(.color-pop)::before{z-index:975}
+.cal-head:has(.cal-pop:not([hidden])){z-index:990}.filters.open .filters-body{z-index:990}
+@keyframes veil-in{from{opacity:0}to{opacity:1}}
+.pop-x{position:absolute;top:6px;right:6px;z-index:5;display:inline-flex!important;align-items:center;justify-content:center;width:26px!important;height:26px!important;min-height:0!important;padding:0!important;margin:0;border-radius:50%!important;color:var(--muted)!important;background:var(--field)!important;border:1px solid var(--line)!important;cursor:pointer;line-height:1}
+.pop-x:hover{color:var(--accent-ink)!important;background:var(--accent)!important;border-color:var(--accent)!important}
+.pop-x svg{width:12px;height:12px;display:block}
+.cal-pop .pop-x,.filters-body .pop-x{position:sticky;top:0;grid-column:1/-1;justify-self:end;margin:0 0 4px auto}
+.cal-ypop .pop-x,.cal-mpop .pop-x{margin:0 0 2px auto}
+.color-pop .pop-title{padding-right:30px}.modal{position:relative}.modal .pop-x{top:8px;right:8px}.modal .modal-title{padding-right:30px}
+.cal-menu:has(.cal-pop:not([hidden])){z-index:90}

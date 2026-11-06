@@ -1,0 +1,27 @@
+/* Mi.Día – Tema Fofinho */
+/* tema fofinho: meigo e fofinho */
+:root[data-skin="fofo"]{
+  --l-bg:#fdeef3;--l-panel:#fff8fb;--l-field:#ffffff;--l-ink:#4a2a3a;--l-muted:#85606f;--l-line:#f1c9d9;--l-accent:#c93b78;--l-accent-ink:#ffffff;--l-danger:#b3263f;--l-drop-bg:rgba(201,59,120,.10);--l-edge:rgba(201,59,120,.30);--l-late:#d12f2f;--l-late-ink:#ffffff;--l-card-ink:#4a2a3a;--l-deco:rgba(240,130,170,.30);--l-c-amarelo:#fff0b3;--l-c-rosa:#ffd0e1;--l-c-azul:#cfe5ff;--l-c-verde:#d2f1dc;--l-c-lilas:#e4d5ff;--l-c-laranja:#ffdcc3;
+  --d-bg:#1f1626;--d-panel:#2a1e33;--d-field:#1a1220;--d-ink:#fbe9f1;--d-muted:#c8a7ba;--d-line:#473253;--d-accent:#ff8fbd;--d-accent-ink:#3a0f22;--d-danger:#ff9aa8;--d-drop-bg:rgba(255,143,189,.14);--d-edge:rgba(255,143,189,.38);--d-late:#ff7a7a;--d-late-ink:#3a0a0a;--d-card-ink:#fff1f7;--d-deco:rgba(255,170,210,.10);--d-c-amarelo:#6f6030;--d-c-rosa:#80405f;--d-c-azul:#3d5f88;--d-c-verde:#40705a;--d-c-lilas:#61498c;--d-c-laranja:#80533a;
+  --font-display:'Fredoka','Baloo 2','Trebuchet MS',system-ui,sans-serif;
+  --font-body:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --r-panel:24px;
+  --r-col:22px;
+  --r-ctl:999px;
+  --r-item:14px;
+  --r-note:16px;
+  --r-pop:22px;
+  --r-icon:50%;
+  --r-tag:999px;
+  --r-sw:50%;
+  --b-width:2px;
+  --b-style:dashed;
+  --ctl-b:2px;
+  --note-shadow:0 3px 0 var(--edge),0 10px 14px -8px var(--edge);
+  --bg-image:radial-gradient(var(--deco) 2px,transparent 2.6px);
+  --bg-size:26px 26px;
+  --h1-size:34px;
+  --h1-track:0;
+  --h2-size:20px;
+  --h2-track:0;
+}

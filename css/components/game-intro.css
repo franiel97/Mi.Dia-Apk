@@ -1,0 +1,10 @@
+/* Mi.Día – Introdução da gamificação */
+.gi-back{position:fixed;inset:0;z-index:990;background:rgba(10,14,22,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);animation:gi-fade .3s ease both}.gi-back.out{animation:gi-fade .25s ease reverse both}
+@keyframes gi-fade{from{opacity:0}}
+.gi-clone{position:fixed;margin:0;pointer-events:none;box-shadow:0 0 0 3px var(--accent),0 0 22px color-mix(in srgb,var(--accent) 70%,transparent);animation:gi-pulse 1.4s ease-in-out infinite}
+@keyframes gi-pulse{50%{box-shadow:0 0 0 7px color-mix(in srgb,var(--accent) 35%,transparent),0 0 30px color-mix(in srgb,var(--accent) 80%,transparent)}}
+.gi-pop{position:fixed;box-sizing:border-box;padding:16px 18px;color:var(--ink);background:var(--panel);border:var(--b-width,1px) var(--b-style,solid) var(--accent);border-radius:var(--r-card,16px);box-shadow:0 18px 50px rgba(0,0,0,.35);animation:gi-pop .4s cubic-bezier(.2,.9,.3,1.2) .15s both}
+.gi-pop::before{content:"";position:absolute;top:-8px;left:calc(var(--ax) - 8px);width:14px;height:14px;transform:rotate(45deg);background:var(--panel);border:inherit;border-right:0;border-bottom:0}
+.gi-pop h3{margin:0 0 6px;font-size:17px}.gi-pop p{margin:0 0 8px;font-size:14px;line-height:1.45;color:var(--muted)}.gi-pop button{margin-top:4px;width:100%}
+@keyframes gi-pop{from{opacity:0;transform:translateY(-8px) scale(.94)}}
+@media (prefers-reduced-motion:reduce){.gi-back,.gi-pop,.gi-clone{animation:none!important}}

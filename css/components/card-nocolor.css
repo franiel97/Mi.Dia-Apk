@@ -1,0 +1,5 @@
+/* Mi.Día – Card sem cor */
+/* Sem cor: card neutro, usa as cores do tema */
+.tone-none{--tint:var(--field);--card-ink:var(--ink)}
+.note.tone-none{border:1px dashed var(--edge)}
+.sw-none{background:linear-gradient(135deg,transparent calc(50% - 1.5px),var(--danger) calc(50% - 1.5px),var(--danger) calc(50% + 1.5px),transparent calc(50% + 1.5px)),var(--field)}

@@ -1,0 +1,8 @@
+/* Mi.Día – botão Copiar tarefas: ícone no mobile */
+#copy-week .cw-ic{display:none;vertical-align:middle}
+@media (max-width:640px){
+  #copy-week .cw-txt{display:none}
+  #copy-week .cw-ic{display:inline-block}
+  #copy-week{padding-left:10px;padding-right:10px}
+  #copy-week.locked::after{content:" 🔒"}
+}

@@ -1,0 +1,29 @@
+/* Mi.Día – Movimento padrão e reduzido */
+/* Padrão: movimento limpo, só em resposta às ações (adicionar, concluir, remover, trocar de semana ou de tema) */
+.fx-dot{background:currentColor;border-radius:50%}
+.fx-bar{background:currentColor;border-radius:2px}
+.fx-ring-pad{border-radius:50%;border-width:2px}
+.fx-ring-pad.bad{border-color:var(--muted)}
+@keyframes fx-pop{0%{transform:scale(.86) translateY(8px);opacity:0}60%{transform:scale(1.025) translateY(-1px);opacity:1}100%{transform:none}}
+@keyframes fx-soft-pulse{0%{transform:scale(1)}40%{transform:scale(1.035)}100%{transform:scale(1)}}
+@keyframes fx-fade-out{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.9) translateY(-6px)}}
+@keyframes fx-col-in{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:none}}
+@keyframes fx-check-pop{0%{transform:scale(.5)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
+@keyframes fx-modal-in{0%{opacity:0;transform:translateY(8px) scale(.97)}100%{opacity:1;transform:none}}
+:root:not([data-skin]) .fx-in{animation:fx-pop .45s cubic-bezier(.2,.9,.3,1.2)}
+:root:not([data-skin]) .task.fx-done{animation:fx-soft-pulse .45s ease}
+:root:not([data-skin]) .task.fx-done > input[type=checkbox]{animation:fx-check-pop .4s cubic-bezier(.3,1.6,.5,1)}
+:root:not([data-skin]) .note.fx-out{animation:fx-fade-out .38s ease-in forwards}
+:root:not([data-skin]) .board.fx-enter .col{animation:fx-col-in .45s cubic-bezier(.2,.8,.3,1) both;animation-delay:calc(var(--i) * 50ms)}
+:root:not([data-skin]) .look,:root:not([data-skin]) .picker{animation:fx-modal-in .22s ease-out}
+:root:not([data-skin]) .modal{animation:fx-modal-in .25s ease-out}
+:root:not([data-skin]) :is(.nav button,.look-btn,.fchip,.primary,.mode-opt,.fx-opt,.skin-opt,.sw){transition:transform .15s ease,border-color .15s ease}
+:root:not([data-skin]) :is(.nav button,.look-btn,.fchip,.primary,.mode-opt,.fx-opt,.skin-opt):active:not(:disabled){transform:scale(.96)}
+:root:not([data-skin]) .sw:hover{transform:scale(1.12)}
+
+/* Animações desligadas no painel ou movimento reduzido no sistema */
+:root[data-fx="off"] *,:root[data-fx="off"] *::before,:root[data-fx="off"] *::after{animation:none!important;transition:none!important}
+@media (prefers-reduced-motion:reduce){
+  .fx-layer{display:none}
+  :root *,:root *::before,:root *::after{animation:none!important;transition:none!important}
+}

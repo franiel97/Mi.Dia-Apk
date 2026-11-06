@@ -1,0 +1,16 @@
+/* Mi.Día – Modo escuro */
+/* modo escuro: sistema (sem escolha do host nem do app), escolha do host, escolha do app */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]):not([data-mode]){--bg:var(--d-bg);--panel:var(--d-panel);--field:var(--d-field);--ink:var(--d-ink);--muted:var(--d-muted);--line:var(--d-line);--accent:var(--d-accent);--accent-ink:var(--d-accent-ink);--danger:var(--d-danger);--drop-bg:var(--d-drop-bg);--edge:var(--d-edge);--late:var(--d-late);--late-ink:var(--d-late-ink);--card-ink:var(--d-card-ink);--deco:var(--d-deco);--c-amarelo:var(--d-c-amarelo);--c-rosa:var(--d-c-rosa);--c-azul:var(--d-c-azul);--c-verde:var(--d-c-verde);--c-lilas:var(--d-c-lilas);--c-laranja:var(--d-c-laranja);color-scheme:dark;}
+}
+:root[data-theme="dark"]:not([data-mode="light"]){--bg:var(--d-bg);--panel:var(--d-panel);--field:var(--d-field);--ink:var(--d-ink);--muted:var(--d-muted);--line:var(--d-line);--accent:var(--d-accent);--accent-ink:var(--d-accent-ink);--danger:var(--d-danger);--drop-bg:var(--d-drop-bg);--edge:var(--d-edge);--late:var(--d-late);--late-ink:var(--d-late-ink);--card-ink:var(--d-card-ink);--deco:var(--d-deco);--c-amarelo:var(--d-c-amarelo);--c-rosa:var(--d-c-rosa);--c-azul:var(--d-c-azul);--c-verde:var(--d-c-verde);--c-lilas:var(--d-c-lilas);--c-laranja:var(--d-c-laranja);color-scheme:dark;}
+:root[data-mode="dark"]{--bg:var(--d-bg);--panel:var(--d-panel);--field:var(--d-field);--ink:var(--d-ink);--muted:var(--d-muted);--line:var(--d-line);--accent:var(--d-accent);--accent-ink:var(--d-accent-ink);--danger:var(--d-danger);--drop-bg:var(--d-drop-bg);--edge:var(--d-edge);--late:var(--d-late);--late-ink:var(--d-late-ink);--card-ink:var(--d-card-ink);--deco:var(--d-deco);--c-amarelo:var(--d-c-amarelo);--c-rosa:var(--d-c-rosa);--c-azul:var(--d-c-azul);--c-verde:var(--d-c-verde);--c-lilas:var(--d-c-lilas);--c-laranja:var(--d-c-laranja);color-scheme:dark;}
+
+*,*::before,*::after{box-sizing:border-box}
+body{
+  background-color:var(--bg);background-image:var(--bg-image);background-size:var(--bg-size);
+  color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.4;
+  padding-block:20px 5px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}

@@ -1,0 +1,16 @@
+/* Mi.Día – Variações masculinas */
+/* Masculino */
+:root[data-skin="tech"] .fx-in{animation:fx-boot .55s steps(14,end)}
+:root[data-skin="tech"] .task.fx-done{animation:fx-flash .7s ease-out}
+:root[data-skin="tech"] .task.fx-done > input[type=checkbox]:checked::after{animation:fx-check-draw .35s steps(6,end)}
+:root[data-skin="tech"] .col.today .col-head{position:relative;overflow:hidden}
+:root[data-skin="tech"] .col.today .col-head::after{content:"";position:absolute;top:0;bottom:0;left:0;width:24%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);animation:fx-sweep 4.4s ease-in-out infinite;pointer-events:none}
+:root[data-skin="tech"] .task.late{animation:fx-ring-late 1.6s ease-in-out infinite}
+:root[data-skin="tech"] .task.late .late-tag{animation:fx-tag-blink 1.2s steps(1,end) infinite}
+:root[data-skin="tech"] .board.fx-enter .col{animation:fx-col-boot .5s steps(12,end) both;animation-delay:calc(var(--i) * 60ms)}
+:root[data-skin="tech"] .look{animation:fx-boot .4s steps(12,end)}
+:root[data-skin="tech"] .chip,
+:root[data-skin="tech"] .task{transition:transform .12s,filter .12s}
+:root[data-skin="tech"] .chip:hover,
+:root[data-skin="tech"] .col-body .task:hover{filter:brightness(1.12);transform:translateX(2px)}
+:root[data-skin="tech"] :is(.nav button,.look-btn,.fchip,.primary,.mode-opt,.fx-opt,.skin-opt):hover:not(:disabled){box-shadow:0 0 0 1px var(--accent)}

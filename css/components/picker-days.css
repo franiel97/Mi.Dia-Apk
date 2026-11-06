@@ -1,0 +1,5 @@
+/* Mi.Día – Dias do seletor */
+.pick{display:flex;align-items:baseline;gap:8px;background:transparent;border:0;border-radius:var(--r-item);padding:7px 8px;text-align:left}
+.pick:hover{background:var(--drop-bg)}
+.pick .pd{font-weight:700;min-width:30px}
+.pick .pn{color:var(--muted);font-family:var(--font-data);font-variant-numeric:tabular-nums}

@@ -1,0 +1,3 @@
+/* Mi.Día – Ações de cada dia */
+.ico-btn{display:inline-flex;align-items:center;justify-content:center;min-width:36px;padding:4px 8px}
+.day-add svg,.day-menu svg{display:block;width:14px;height:14px}.day-pop{position:fixed;z-index:960;display:flex;gap:6px;padding:6px;background:var(--panel);border:var(--b-width,1px) var(--b-style,solid) var(--line);border-radius:var(--r-pop,12px);box-shadow:0 10px 30px rgba(0,0,0,.28)}.day-pop .icon{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center}.day-pop .day-clear{color:var(--danger)}.day-pop svg{width:18px;height:18px}

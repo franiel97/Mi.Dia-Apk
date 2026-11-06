@@ -1,0 +1,13 @@
+/* Mi.Día – Tema Floresta: variáveis */
+:root[data-skin="floresta"]{
+  --l-bg:#eef3e4;--l-panel:#fbfdf6;--l-field:#ffffff;--l-ink:#22331f;--l-muted:#5d6f55;--l-line:#cddcb9;--l-accent:#2f7d4f;--l-accent-ink:#ffffff;--l-danger:#a8321f;--l-drop-bg:rgba(47,125,79,.10);--l-edge:rgba(47,125,79,.28);--l-late:#c0392b;--l-late-ink:#ffffff;--l-card-ink:#22331f;--l-deco:rgba(80,140,90,.16);--l-c-amarelo:#f3e9a8;--l-c-rosa:#f5d0c8;--l-c-azul:#cfe4ea;--l-c-verde:#cfe8c0;--l-c-lilas:#ddd3ea;--l-c-laranja:#f4d5b0;
+  --d-bg:#121c15;--d-panel:#1b2a1f;--d-field:#101811;--d-ink:#e8f2e1;--d-muted:#a5bba0;--d-line:#2f4634;--d-accent:#7fd69a;--d-accent-ink:#0c2314;--d-danger:#ff9b8a;--d-drop-bg:rgba(127,214,154,.14);--d-edge:rgba(127,214,154,.34);--d-late:#ff8a78;--d-late-ink:#3a0c06;--d-card-ink:#f0f8ea;--d-deco:rgba(127,214,154,.08);--d-c-amarelo:#6b6530;--d-c-rosa:#7a4a42;--d-c-azul:#3b5f6b;--d-c-verde:#3f6e45;--d-c-lilas:#5a4a78;--d-c-laranja:#7a5530;
+  --font-display:'Fraunces',Georgia,'Times New Roman',serif;
+  --font-body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --r-panel:20px;--r-col:18px;--r-ctl:12px;--r-item:12px;--r-note:4px 16px 4px 16px;--r-pop:18px;--r-icon:12px;--r-tag:10px;--r-sw:50% 8px 50% 8px;
+  --b-width:1px;--b-style:solid;--ctl-b:1px;
+  --note-shadow:0 2px 0 var(--edge),0 8px 14px -10px var(--edge);
+  --bg-image:repeating-linear-gradient(135deg,var(--deco) 0 2px,transparent 2px 26px);
+  --bg-size:auto;
+  --h1-size:32px;--h1-track:-.01em;--h2-size:20px;--h2-track:0;
+}

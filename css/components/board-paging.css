@@ -1,0 +1,38 @@
+/* Mi.Día – Quadro paginado */
+/* Visualização de dias do quadro é paginada via JS (--board-days);*/
+@media (max-width:640px){
+  body{padding-left:max(8px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px)); padding-block: 20px max(0px, env(safe-area-inset-bottom, 0px))}
+  h1{font-size:clamp(20px,6.4vw,var(--h1-size))}
+  .top{gap:8px 12px}
+  .tools{padding: 0px 5px 0px 7px;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;}
+  /* pop-ups viram folhas na base da tela, com a largura toda */
+  .look,.picker{left:0!important;right:0!important;top:auto!important;bottom:0!important;width:auto!important;max-height:86vh;max-height:86dvh;overflow:auto;border-radius:var(--r-pop) var(--r-pop) 0 0;padding-bottom:max(12px,env(safe-area-inset-bottom,0px))}
+  .top{margin-bottom:12px}
+  .tray{padding: 0px 12px 0px;margin-bottom:10px}
+  .view-toggle{width:100%}
+  .vt-opt{flex:1;text-align:center}
+  .filters-body{width:100%;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav{gap:6px}
+  .nav .week{flex:1 1 100%;order:5;margin:2px 0 0}
+  .col{min-height:0}
+  .cal-cell{min-height:60px;padding:4px 5px;gap:2px}
+  .cal-num{font-size:12px}
+  .cal-dot{width:6px;height:6px}
+  .cal-count{display:none}
+}
+
+.footer p {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    /*padding: 10px 4px 0px 4px*/
+}
+
+@media (prefers-reduced-motion:reduce){
+  .col.flash,.led,:root[data-skin="tech"] h1::after{animation:none}
+}

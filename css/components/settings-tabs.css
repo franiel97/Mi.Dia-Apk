@@ -1,0 +1,24 @@
+/* Mi.Día – Abas de configurações e avisos */
+/* ---------- Guias Configurações e Notificações ---------- */
+.view-toggle{display:flex;align-items:center;width:100%}
+.vt-right{margin-left:auto;display:flex;align-items:center;gap:6px;flex:none}
+.view-toggle .look-btn{min-height:34px;padding:5px 14px;border-radius:calc(var(--r-ctl) - 3px)}
+@media (max-width:640px){
+  .view-toggle{gap:2px;min-width:0;box-sizing:border-box}
+  .view-toggle .vt-opt{flex:1 1 auto;min-width:0;padding:7px 6px;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .vt-right{gap:2px}
+  .view-toggle .look-btn,.view-toggle .bell-btn{width:36px;min-width:36px;padding:0!important;display:inline-flex;align-items:center;justify-content:center}
+  html,body{max-width:100%;overflow-x:hidden}
+}
+.look-btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.bell-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;width:40px;padding:0!important}
+.bell{display:none;width:20px;height:20px;overflow:visible}
+:root:not([data-skin]) .bell-padrao,:root[data-skin="glass"] .bell-padrao,:root[data-skin="floresta"] .bell-padrao,:root[data-skin="caderno"] .bell-padrao,:root[data-skin="fofo"] .bell-fofo,:root[data-skin="tech"] .bell-tech{display:block}
+.bell-badge{position:absolute;top:-7px;right:-5px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--late);color:var(--late-ink);font:700 11px/18px var(--font-data);text-align:center;pointer-events:none}
+.bell-badge[hidden]{display:none}
+:root[data-skin="fofo"] .bell-badge{background:#ff6fa5;color:#4a1330;box-shadow:0 0 0 2px var(--panel)}
+:root[data-skin="tech"] .bell-badge{border-radius:2px;box-shadow:0 0 0 1px var(--panel)}
+:root[data-skin="fofo"] .bell-btn.has-new .bell-fofo{animation:fx-wiggle 2.4s ease-in-out infinite;transform-origin:50% 10%}
+:root[data-skin="tech"] .bell-btn.has-new .bell-badge{animation:fx-tag-blink 1.2s steps(1,end) infinite}
+:root:not([data-skin]) .bell-btn.has-new .bell-padrao{animation:fx-wiggle 2.4s ease-in-out infinite;transform-origin:50% 10%}
+.settings,.notifs{margin-bottom:24px;width:100%;max-width:1600px;margin-left:auto;margin-right:auto}

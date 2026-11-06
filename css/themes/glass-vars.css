@@ -1,0 +1,33 @@
+/* Mi.Día – Tema Liquid Glass: variáveis */
+/* tema liquid glass: vidro translúcido, desfoque, reflexos e movimento elástico */
+:root[data-skin="glass"]{
+  --l-bg:#cfe0f6;--l-panel:rgba(255,255,255,.34);--l-field:rgba(255,255,255,.55);--l-ink:#0b1a2e;--l-muted:#3f5470;--l-line:rgba(255,255,255,.62);--l-accent:#0a7aff;--l-accent-ink:#ffffff;--l-danger:#d62d3f;--l-drop-bg:rgba(10,122,255,.18);--l-edge:rgba(255,255,255,.85);--l-late:#e0342c;--l-late-ink:#ffffff;--l-card-ink:#10223a;--l-deco:transparent;--l-c-amarelo:#ffe9a0;--l-c-rosa:#ffc6dc;--l-c-azul:#b6d8ff;--l-c-verde:#bdf0d3;--l-c-lilas:#d9c8ff;--l-c-laranja:#ffd2a8;
+  --d-bg:#0a1020;--d-panel:rgba(48,60,92,.36);--d-field:rgba(255,255,255,.09);--d-ink:#eef3fb;--d-muted:#a3b3ca;--d-line:rgba(255,255,255,.16);--d-accent:#64b5ff;--d-accent-ink:#04152b;--d-danger:#ff7b86;--d-drop-bg:rgba(100,181,255,.20);--d-edge:rgba(255,255,255,.34);--d-late:#ff8a80;--d-late-ink:#3a0a07;--d-card-ink:#f2f6fc;--d-deco:transparent;--d-c-amarelo:#7a6516;--d-c-rosa:#80375b;--d-c-azul:#26578a;--d-c-verde:#2a6b4b;--d-c-lilas:#5a458f;--d-c-laranja:#84501f;
+  --font-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',system-ui,sans-serif;
+  --font-body:-apple-system,BlinkMacSystemFont,'SF Pro Text','Inter','Segoe UI',system-ui,sans-serif;
+  --font-data:-apple-system,BlinkMacSystemFont,'SF Pro Text','Inter','Segoe UI',system-ui,sans-serif;
+  --font-num:var(--font-data);
+  --font-btn:var(--font-body);
+  --r-panel:28px;
+  --r-col:28px;
+  --r-ctl:999px;
+  --r-item:20px;
+  --r-note:20px;
+  --r-pop:30px;
+  --r-icon:50%;
+  --r-tag:999px;
+  --r-sw:50%;
+  --b-width:1px;
+  --b-style:solid;
+  --ctl-b:1px;
+  --note-border:1px solid var(--edge);
+  --note-shadow:inset 0 1px 1px var(--edge),inset 0 -8px 16px -10px rgba(255,255,255,.35),0 8px 22px -12px rgba(15,30,70,.45);
+  --glass-shadow:inset 0 1px 1px var(--edge),inset 0 0 0 1px var(--line),inset 0 -10px 24px -14px var(--edge),0 14px 36px -16px rgba(10,25,60,.5);
+  --glass-blur:blur(22px) saturate(180%);
+  --h1-size:32px;
+  --h1-track:-.03em;
+  --h2-size:19px;
+  --h2-track:-.015em;
+  --btn-size:14.5px;
+  --spring:cubic-bezier(.34,1.56,.64,1);
+}

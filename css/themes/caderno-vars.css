@@ -1,0 +1,13 @@
+/* Mi.Día – Tema Caderno: variáveis */
+:root[data-skin="caderno"]{
+  --l-bg:#f6f0e1;--l-panel:#fffdf5;--l-field:#fffef9;--l-ink:#243049;--l-muted:#6a6f80;--l-line:#d9cfae;--l-accent:#2c4fa3;--l-accent-ink:#ffffff;--l-danger:#b3261e;--l-drop-bg:rgba(44,79,163,.08);--l-edge:rgba(60,50,20,.22);--l-late:#c62828;--l-late-ink:#ffffff;--l-card-ink:#243049;--l-deco:rgba(80,120,200,.22);--l-c-amarelo:#fff2a0;--l-c-rosa:#ffc9d6;--l-c-azul:#bfe0ff;--l-c-verde:#c9efc0;--l-c-lilas:#e0d0ff;--l-c-laranja:#ffd6a8;
+  --d-bg:#1a1d26;--d-panel:#232733;--d-field:#171a22;--d-ink:#e9ecf5;--d-muted:#a2a9bd;--d-line:#3a4054;--d-accent:#8fb0ff;--d-accent-ink:#0b1a40;--d-danger:#ff9a92;--d-drop-bg:rgba(143,176,255,.14);--d-edge:rgba(143,176,255,.30);--d-late:#ff8a80;--d-late-ink:#3a0a07;--d-card-ink:#f2f4fb;--d-deco:rgba(143,176,255,.07);--d-c-amarelo:#6b6428;--d-c-rosa:#7d4457;--d-c-azul:#3a5f86;--d-c-verde:#3f6d48;--d-c-lilas:#5b4a85;--d-c-laranja:#7a5430;
+  --font-display:'Caveat','Segoe Print','Bradley Hand',cursive;
+  --font-body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --r-panel:8px;--r-col:6px;--r-ctl:8px;--r-item:6px;--r-note:3px;--r-pop:8px;--r-icon:8px;--r-tag:4px;--r-sw:4px;
+  --b-width:1px;--b-style:solid;--ctl-b:1px;
+  --note-shadow:2px 3px 0 var(--edge),0 10px 14px -10px var(--edge);
+  --bg-image:repeating-linear-gradient(transparent 0 27px,var(--deco) 27px 28px);
+  --bg-size:auto;
+  --h1-size:42px;--h1-track:0;--h2-size:26px;--h2-track:0;
+}

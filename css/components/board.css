@@ -1,0 +1,61 @@
+/* Mi.Día – Quadro semanal */
+/* Quadro semanal */
+.board{position:relative;display:grid;grid-template-columns:repeat(var(--board-days,7),minmax(0,1fr));gap:10px;align-items:stretch}
+.col{display:flex;flex-direction:column;min-width:0;min-height:340px;background:var(--hud),var(--panel);border:var(--b-width) var(--b-style) var(--line);border-radius:var(--r-col);overflow:hidden}
+.col.over{outline:2px solid var(--accent);outline-offset:-2px;background-color:var(--drop-bg)}
+.col.flash{animation:flash .9s ease-out}
+@keyframes flash{from{background-color:var(--drop-bg)}to{background-color:var(--panel)}}
+.col-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:10px 12px;border-bottom:var(--b-width) var(--b-style) var(--line);font-family:var(--font-display)}
+.col-title{display:flex;align-items:baseline;gap:6px;min-width:0}
+.dow{font-weight:700;font-size:15px;text-transform:var(--dow-case);letter-spacing:var(--dow-track)}
+.num{font-family:var(--font-num);font-weight:800;font-size:22px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.mon{font-family:var(--font-body);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.col-head .count{font-family:var(--font-data);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.col.today .col-head{background:var(--accent);color:var(--accent-ink);border-bottom-color:var(--accent)}
+.col.today .mon,.col.today .col-head .count{color:inherit;opacity:.85}
+.col-body{flex:1;display:flex;flex-direction:column;gap:6px;padding:8px;min-height:200px}
+.col-body:empty::before{
+  content:"Solte um card aqui";display:block;border:1.5px dashed var(--line);border-radius:var(--r-item);
+  color:var(--muted);font-family:var(--font-data);font-size:13px;text-align:center;padding:18px 8px;
+}
+.task{display:flex;align-items:flex-start;gap:8px;padding:8px 4px 8px 9px}
+.task > input[type=checkbox]{flex:none;width:18px;height:18px;margin:1px 0 0;accent-color:var(--card-ink);cursor:pointer}
+.task .tbody{flex:1;min-width:0}
+.task .t{display:inline;min-width:0;overflow-wrap:anywhere;font-size:14px;font-weight:500;line-height:1.3}
+.task.done .t,.task.done .tmeta{opacity:.6}
+.task.done .t{text-decoration:line-through}
+.tline{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 6px;padding-top:1px}
+.tmeta{display:inline-flex;flex-wrap:wrap;align-items:center;gap:3px 6px;font-family:var(--font-data);font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;margin-left: auto;}
+.thead{min-width:0;overflow-wrap:anywhere}
+.tsep{opacity:.5;margin-left:5px}
+.late-tag{background:var(--late);color:var(--late-ink);border-radius:var(--r-tag);padding:1px 6px;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.ongoing-tag{background:var(--accent);color:var(--accent-ink);border-radius:var(--r-tag);padding:1px 6px;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.task.late{box-shadow:inset 0 0 0 2px var(--late),var(--note-shadow)}
+.task.ongoing{box-shadow:inset 0 0 0 2px var(--accent),var(--note-shadow)}
+.sep{margin:4px 2px 0;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.task .icon{width:26px;height:26px;margin-top:-3px;font-size:17px}
+.drop-line{flex:none;height:3px;border-radius:2px;background:var(--accent);margin:-1px 0}
+
+/* Detalhes do tema fofinho */
+:root[data-skin="fofo"] .col-body:not([data-empty]):empty::before{content:"Solte um card aqui \2661\FE0E"}
+:root[data-skin="fofo"] .col-body[data-empty="filtro"]:empty::before{content:"Nenhum card neste filtro \2661\FE0E"}
+:root[data-skin="fofo"] .col.today .col-head .dow::after{content:" \2661\FE0E"}
+:root[data-skin="fofo"] .col-body .task:nth-child(odd){transform:rotate(-.7deg)}
+:root[data-skin="fofo"] .col-body .task:nth-child(even){transform:rotate(.6deg)}
+:root[data-skin="fofo"] .task > input[type=checkbox],
+:root[data-skin="tech"] .task > input[type=checkbox]{-webkit-appearance:none;appearance:none;display:grid;place-items:center;width:20px;height:20px;border:2px solid var(--card-ink);background:transparent}
+:root[data-skin="fofo"] .task > input[type=checkbox]{border-radius:50%}
+:root[data-skin="tech"] .task > input[type=checkbox]{border-radius:2px}
+:root[data-skin="fofo"] .task > input[type=checkbox]:checked,
+:root[data-skin="tech"] .task > input[type=checkbox]:checked{background:var(--card-ink)}
+:root[data-skin="fofo"] .task > input[type=checkbox]:checked::after{content:"\2665\FE0E";color:var(--tint);font-size:11px;line-height:1}
+:root[data-skin="tech"] .task > input[type=checkbox]:checked::after{content:"\2713\FE0E";color:var(--tint);font-size:13px;font-weight:700;line-height:1}
+
+/* Detalhes do tema tech */
+:root[data-skin="tech"] .col-body:not([data-empty]):empty::before{content:"// solte um card aqui"}
+:root[data-skin="tech"] .col-body[data-empty="filtro"]:empty::before{content:"// nenhum card neste filtro"}
+:root[data-skin="tech"] .time::before{content:"["}
+:root[data-skin="tech"] .time::after{content:"]"}
+:root[data-skin="tech"] .late-tag::before{content:"! "}
+:root[data-skin="tech"] .filters-label::before{content:"// "}
+:root[data-skin="tech"] .mon{font-family:var(--font-data);font-size:11px}

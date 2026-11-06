@@ -1,0 +1,34 @@
+/* Mi.Día – Confirmações, bloqueios e vínculos */
+/* ===== Exclusão com confirmação, bloqueio de atrasados, dias passados ===== */
+.col-tools{display:flex;align-items:center;gap:4px}
+.day-clear svg{display:block;width:14px;height:14px}
+.col.denied,.cal-cell.denied{outline:2px dashed var(--danger);outline-offset:-2px;cursor:not-allowed}
+.col.denied{position:relative}
+.col.denied::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--danger) 14%,transparent) 0 10px,transparent 10px 20px)}
+.col.denied::after{content:attr(data-deny);position:absolute;left:10px;right:10px;top:56px;z-index:2;padding:8px 10px;text-align:center;font-size:13px;font-weight:600;line-height:1.3;color:var(--danger);background:var(--bg);background:color-mix(in srgb,var(--bg) 92%,transparent);border:1px solid var(--danger);border-radius:var(--r-item);pointer-events:none;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.cal-cell.denied::after{content:attr(data-deny);margin-top:auto;font-size:10px;line-height:1.15;font-weight:600;color:var(--danger)}
+.confirm-warn,.confirm-extreme{position:relative}
+.confirm-warn{background:linear-gradient(180deg,color-mix(in srgb,#f2b01e 24%,transparent),color-mix(in srgb,var(--danger) 9%,transparent) 75%)}
+.confirm-warn::before,.confirm-extreme::before{content:"";flex:none;height:8px}
+.confirm-warn::before{background:repeating-linear-gradient(135deg,#f2b01e 0 10px,color-mix(in srgb,var(--danger) 80%,#000) 10px 20px)}
+.confirm-warn .modal-title{color:color-mix(in srgb,var(--danger) 78%,#8a5a00)}
+.confirm-warn .modal-title::before{content:"\26A0\FE0E  ";color:#e0a21a}
+.modal:has(.confirm-warn){border-color:#e0a21a;box-shadow:0 0 0 2px color-mix(in srgb,#e0a21a 55%,transparent),0 18px 48px rgba(0,0,0,.4)}
+.confirm-extreme{background:linear-gradient(180deg,color-mix(in srgb,var(--danger) 30%,transparent),color-mix(in srgb,var(--danger) 12%,transparent))}
+.confirm-extreme::before{background:repeating-linear-gradient(135deg,var(--danger) 0 10px,#5e0b0e 10px 20px)}
+.confirm-extreme .modal-title{color:var(--danger);text-transform:uppercase;letter-spacing:.02em}
+.confirm-extreme .modal-title::before{content:"\26A0\FE0E  "}
+.confirm-extreme .modal-sub,.confirm-extreme .modal-note{color:var(--ink);font-weight:600}
+.confirm-extreme .primary.danger{background:#b3151c;color:#fff;box-shadow:0 0 0 2px color-mix(in srgb,var(--danger) 55%,transparent)}
+.modal:has(.confirm-extreme){border:2px solid var(--danger);box-shadow:0 0 0 3px color-mix(in srgb,var(--danger) 40%,transparent),0 18px 48px rgba(0,0,0,.5)}
+.btn-alt.warn{color:var(--danger);border-color:var(--danger)}
+.modal-note{margin:0;padding:10px 12px;font-size:13.5px;line-height:1.45;background:var(--drop-bg);border-left:3px solid var(--accent);border-radius:var(--r-item)}
+.lock-ico{display:inline-block;width:11px;height:11px;margin-left:4px;vertical-align:-1px}
+.lock-ico svg{display:block;width:100%;height:100%}
+.link-ico{display:inline-block;width:13px;height:13px;margin-left:4px;vertical-align:-2px}
+.link-ico svg{display:block;width:100%;height:100%}
+.task.locked > input[type=checkbox],.task.locked .nk,.task.locked .nck{cursor:not-allowed}
+.task.locked > input[type=checkbox],.task.locked .nk{opacity:.55}
+.pick.is-off{opacity:.45;cursor:default}
+.pick+.fld-help{margin:-2px 8px 4px 32px}
+.primary.danger{background:var(--danger);color:var(--panel)}

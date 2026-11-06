@@ -1,0 +1,40 @@
+/* Mi.Día – Tema Tech */
+/* tema tech: visual tech */
+:root[data-skin="tech"]{
+  --l-bg:#e4ebf3;--l-panel:#f3f7fb;--l-field:#ffffff;--l-ink:#0e1a2a;--l-muted:#4a5f76;--l-line:#b5c5d8;--l-accent:#0b5fd0;--l-accent-ink:#ffffff;--l-danger:#b3261e;--l-drop-bg:rgba(11,95,208,.10);--l-edge:rgba(14,26,42,.35);--l-late:#c4271f;--l-late-ink:#ffffff;--l-card-ink:#0e1a2a;--l-deco:rgba(11,95,208,.08);--l-c-amarelo:#f1df86;--l-c-rosa:#f3b9d0;--l-c-azul:#a8d3f6;--l-c-verde:#a6e6c3;--l-c-lilas:#cbbcf5;--l-c-laranja:#f7c493;
+  --d-bg:#060b12;--d-panel:#0d1621;--d-field:#09111a;--d-ink:#d8e6f4;--d-muted:#7d93a9;--d-line:#1d3145;--d-accent:#27e0cf;--d-accent-ink:#031c19;--d-danger:#ff6b6b;--d-drop-bg:rgba(39,224,207,.12);--d-edge:rgba(160,200,235,.35);--d-late:#ff5c5c;--d-late-ink:#2b0606;--d-card-ink:#e6f1fb;--d-deco:rgba(39,224,207,.07);--d-c-amarelo:#594b0d;--d-c-rosa:#5f2444;--d-c-azul:#0f3f66;--d-c-verde:#0d5340;--d-c-lilas:#3b2f72;--d-c-laranja:#603410;
+  --font-display:'Chakra Petch','Rajdhani','Trebuchet MS',system-ui,sans-serif;
+  --font-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-data:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --font-num:var(--font-data);
+  --font-btn:var(--font-data);
+  --r-panel:3px;
+  --r-col:3px;
+  --r-ctl:3px;
+  --r-item:2px;
+  --r-note:2px;
+  --r-pop:4px;
+  --r-icon:2px;
+  --r-tag:1px;
+  --r-sw:2px;
+  --b-width:1px;
+  --b-style:solid;
+  --ctl-b:1px;
+  --note-border:1px solid var(--edge);
+  --note-shadow:0 0 0 0 transparent;
+  --note-clip:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,0 100%);
+  --hud:linear-gradient(var(--accent),var(--accent)) top left/12px 2px no-repeat,linear-gradient(var(--accent),var(--accent)) top left/2px 12px no-repeat,linear-gradient(var(--accent),var(--accent)) top right/12px 2px no-repeat,linear-gradient(var(--accent),var(--accent)) top right/2px 12px no-repeat,linear-gradient(var(--accent),var(--accent)) bottom left/12px 2px no-repeat,linear-gradient(var(--accent),var(--accent)) bottom left/2px 12px no-repeat,linear-gradient(var(--accent),var(--accent)) bottom right/12px 2px no-repeat,linear-gradient(var(--accent),var(--accent)) bottom right/2px 12px no-repeat;
+  --bg-image:linear-gradient(var(--deco) 1px,transparent 1px),linear-gradient(90deg,var(--deco) 1px,transparent 1px);
+  --bg-size:28px 28px;
+  --h1-size:26px;
+  --h1-track:.05em;
+  --h1-case:uppercase;
+  --h2-size:15px;
+  --h2-track:.1em;
+  --h2-case:uppercase;
+  --dow-case:uppercase;
+  --dow-track:.1em;
+  --btn-case:uppercase;
+  --btn-track:.05em;
+  --btn-size:12.5px;
+}

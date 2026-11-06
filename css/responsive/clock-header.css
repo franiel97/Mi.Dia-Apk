@@ -1,0 +1,10 @@
+/* Mi.Día – Relógio e cabeçalho no mobile */
+/* ===== Relógio e cabeçalho no mobile ===== */
+@media (max-width:640px){
+  .top{flex-wrap:nowrap;align-items:flex-start}
+  .brand{min-width:0;flex:1 1 auto}
+  .clock{flex:none;margin-left:0;gap:6px;padding:4px 10px;font-size:13px}
+  :root[data-skin="fofo"] .clock{font-size:15px}
+  :root[data-skin="tech"] .clock{font-size:11px;padding:3px 7px}
+  :root[data-skin="tech"] .clock .sys{display:none}
+}
