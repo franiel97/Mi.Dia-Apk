@@ -1,0 +1,24 @@
+{
+	"appId": "com.midia.planner",
+	"appName": "Mi.Día",
+	"webDir": "www",
+	"server": {
+		"url": "https://midia-planner.netlify.app/",
+		"cleartext": false,
+		"androidScheme": "https",
+		"allowNavigation": [
+			"midia-planner.netlify.app"
+		]
+	},
+	"plugins": {
+		"LocalNotifications": {
+			"smallIcon": "ic_stat_midia",
+			"iconColor": "#6D5DFB",
+			"sound": "default"
+		},
+		"StatusBar": {
+			"overlaysWebView": true,
+			"style": "LIGHT"
+		}
+	}
+}
