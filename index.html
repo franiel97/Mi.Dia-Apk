@@ -1,0 +1,402 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+<script src="js/boot/storage-scope.js"></script>
+
+
+<link rel="stylesheet" href="css/base/reset.css">
+<link rel="stylesheet" href="css/components/profile.css">
+
+<title>Mi.Día | Tarefas e Rotina​​</title>
+<meta name="franiel:franiel.tech" content="cover">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#e8ecf0">
+<meta name="application-name" content="Mi.Día">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mi.Día">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;500;600&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Fraunces:wght@600;700&family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="css/components/game-panel.css">
+<link rel="stylesheet" href="css/base/touch.css">
+<link rel="stylesheet" href="css/components/game-intro.css">
+<link rel="stylesheet" href="css/components/unlocks.css">
+<link rel="stylesheet" href="css/themes/floresta-vars.css">
+<link rel="stylesheet" href="css/themes/caderno-vars.css">
+<link rel="stylesheet" href="css/themes/floresta-caderno.css">
+<link rel="stylesheet" href="css/components/day-actions.css">
+<link rel="stylesheet" href="css/components/game-badge.css">
+<link rel="stylesheet" href="css/themes/dash-colors.css">
+<link rel="stylesheet" href="css/components/game-toast.css">
+<link rel="stylesheet" href="css/responsive/header-small.css">
+<link rel="stylesheet" href="css/components/tutorial.css">
+<link rel="stylesheet" href="css/base/tap-highlight.css">
+<link rel="stylesheet" href="css/themes/padrao.css">
+<link rel="stylesheet" href="css/themes/fofo.css">
+<link rel="stylesheet" href="css/themes/tech.css">
+<link rel="stylesheet" href="css/themes/glass-vars.css">
+<link rel="stylesheet" href="css/base/dark-mode.css">
+<link rel="stylesheet" href="css/layout/page.css">
+<link rel="stylesheet" href="css/layout/header.css">
+<link rel="stylesheet" href="css/components/clock.css">
+<link rel="stylesheet" href="css/components/tray.css">
+<link rel="stylesheet" href="css/components/filters.css">
+<link rel="stylesheet" href="css/components/board.css">
+<link rel="stylesheet" href="css/components/drag.css">
+<link rel="stylesheet" href="css/components/picker.css">
+<link rel="stylesheet" href="css/layout/view-toggle.css">
+<link rel="stylesheet" href="css/components/calendar-head.css">
+<link rel="stylesheet" href="css/components/popovers.css">
+<link rel="stylesheet" href="css/components/calendar-grid.css">
+<link rel="stylesheet" href="css/components/picker-days.css">
+<link rel="stylesheet" href="css/components/look-panel.css">
+<link rel="stylesheet" href="css/components/board-paging.css">
+<link rel="stylesheet" href="css/animations/skins.css">
+<link rel="stylesheet" href="css/themes/feminine.css">
+<link rel="stylesheet" href="css/themes/masculine.css">
+<link rel="stylesheet" href="css/themes/glass.css">
+<link rel="stylesheet" href="css/components/editor.css">
+<link rel="stylesheet" href="css/components/settings-tabs.css">
+<link rel="stylesheet" href="css/components/dash.css">
+<link rel="stylesheet" href="css/animations/card-exit.css">
+<link rel="stylesheet" href="css/components/card-nocolor.css">
+<link rel="stylesheet" href="css/animations/mass-delete.css">
+<link rel="stylesheet" href="css/animations/motion.css">
+<link rel="stylesheet" href="css/responsive/mobile.css">
+<link rel="stylesheet" href="css/responsive/clock-header.css">
+<link rel="stylesheet" href="css/components/confirm-lock.css">
+<link rel="stylesheet" href="css/components/color-pop.css">
+<link rel="stylesheet" href="css/responsive/dock.css">
+<link rel="stylesheet" href="css/responsive/calendar-header.css">
+<link rel="stylesheet" href="css/components/copy-week-btn.css">
+<link rel="stylesheet" href="css/components/pf-points.css">
+<link rel="stylesheet" href="css/components/pf-points.css">
+<script src="js/lang/core.js"></script>
+<script src="js/lang/en.js"></script>
+<script src="js/lang/es.js"></script>
+<script src="js/rules/points.js"></script>
+<script src="js/rules/levels.js"></script>
+<script src="js/rules/achievements.js"></script>
+<script src="js/rules/unlocks.js"></script>
+<script src="js/rules/texts.js"></script>
+<script src="js/boot/anti-flash.js"></script>
+
+</head>
+<body>
+<div id="login-page"><div id="lp-box"></div></div>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <div class="brand-row">
+        <h1> Mi.Día | Tarefas e Rotina​</h1>
+        <span class="deco deco-fofo" aria-hidden="true">
+          <svg class="s-big" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <svg class="s-mid" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z"/></svg>
+          <svg class="s-small" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </span>
+      </div>
+    </div>
+    <div class="top-right">
+    <button type="button" class="game-btn" id="game-btn" aria-label="Seu nível" title="Seu nível" hidden><span id="game-ico" aria-hidden="true"></span><span id="game-hp"></span></button>
+    <div class="clock" id="clock" title="Horário local" aria-label="Horário local">
+      <span class="led" aria-hidden="true"></span><span class="sys" aria-hidden="true">ONLINE</span><time id="clock-time">--:--</time>
+    </div>
+    </div>
+  </header>
+
+  <div class="view-toggle" id="view-toggle" role="group" aria-label="Alternar visualização">
+    <button type="button" class="vt-opt" data-view="board" aria-pressed="true">Quadro</button>
+    <button type="button" class="vt-opt" data-view="calendar" aria-pressed="false">Calendário</button>
+    <button type="button" class="vt-opt" data-view="dash" aria-pressed="false">Dash</button>
+    <span class="vt-right">
+      <button type="button" class="look-btn bell-btn" id="open-notifs" data-view="notifs" aria-pressed="false" aria-label="Notificações" title="Notificações"><svg class="bell bell-padrao" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></g></svg><svg class="bell bell-fofo" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 6 3 8 3 8H3s3-2 3-8"/></g><g fill="currentColor"><g transform="translate(8.3 16.4) scale(.34)"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></g><g transform="translate(17 0.2) scale(.26)"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z"/></g></g></svg><svg class="bell bell-tech" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 8V3h5M21 8V3h-5M3 16v5h5M21 16v5h-5"/><path d="M12 8v6"/><path d="M12 17.2h.01" stroke-width="2.6"/></g></svg><span class="bell-badge" id="bell-badge" hidden></span></button>
+      <button type="button" class="look-btn bell-btn" id="open-profile" data-view="profile" aria-pressed="false" aria-label="Perfil" title="Perfil"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></g></svg></button>
+      <button type="button" class="look-btn" id="open-look" data-view="settings" aria-pressed="false" aria-label="Configurações" title="Configurações"><svg class="gear" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></g></svg><span class="gt">Configurações</span></button>
+    </span>
+  </div>
+
+  <section class="tray" id="tray" aria-labelledby="tray-title">
+    <div class="tray-head">
+      <h2 id="tray-title">Criar tarefas</h2>
+    </div>
+    <form id="new-card" autocomplete="off">
+      <label class="sr" for="card-title">Nome da tarefa</label>
+      <input id="card-title" type="text" maxlength="80" placeholder="Título da tarefa, por exemplo: Lavar Louça">
+      <fieldset class="tones" id="tones">
+        <legend class="sr">Cor da tarefa</legend>
+        <label class="sw sw-new" title="Escolher uma nova cor"><input type="color" id="new-color" value="#4f8cff"><span class="sr">Escolher uma nova cor</span></label>
+      </fieldset>
+      <button type="submit" class="primary">Criar tarefa</button>
+    </form>
+    <div class="tray-head" id="cards-head">
+      <h2 id="cards-title">Suas tarefas</h2>
+      <span class="count" id="card-count"></span>
+      <button type="button" class="btn-alt sm" id="cards-toggle" aria-controls="chips" aria-expanded="true">Ocultar</button>
+      <p class="hint">
+        <span class="hint-default">Arraste uma tarefa até o dia, ou use o + para configurá-la (cor, dias, horário e descrição).<span class="hint-touch"> No celular, toque e segure para arrastar.</span></span>
+        <span class="hint-remove">Solte aqui para tirar a tarefa do dia.</span>
+      </p>
+    </div>
+    <div class="chips" id="chips">
+    </div>
+  </section>
+ 
+   <div class="nav" id="nav" role="group" aria-label="Navegar entre dias">
+      <button type="button" class="arrow" id="prev" aria-label="Semana anterior">‹</button>
+      <button type="button" id="goto-today">Hoje</button>
+      <button type="button" class="arrow" id="next" aria-label="Próxima semana">›</button>
+  <div class="filters" id="filters" role="group" aria-label="Filtrar tarefas do quadro">
+    <button type="button" class="filters-toggle" id="filters-toggle" aria-expanded="false" aria-controls="filters-body" aria-label="Filtros"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M7 12h10M10 18h4"/></svg><span class="ft-txt">Filtros</span><span class="ft-badge" id="filters-badge" hidden></span></button>
+    <div class="filters-body" id="filters-body">
+    <span class="filters-label">EXIBIR</span>
+    <button type="button" class="fchip" data-filter="todos" aria-pressed="true">Todos</button>
+    <button type="button" class="fchip" data-filter="com" aria-pressed="false">Com horário</button>
+    <button type="button" class="fchip" data-filter="sem" aria-pressed="false">Sem horário</button>
+    <button type="button" class="fchip" data-filter="atrasados" aria-pressed="false">Atrasados</button>
+    <button type="button" class="fchip" data-filter="concluidos" aria-pressed="false">Concluídos</button>
+    <button type="button" class="fchip" data-filter="pendentes" aria-pressed="false">Não concluídos</button>
+    <span class="filter-status" id="filter-status" aria-live="polite"></span>
+    </div>
+  </div>
+      <button type="button" id="copy-week" title="Copiar tarefas"><svg class="cw-ic" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span class="cw-txt">Copiar tarefas</span></button>
+	 <p class="week" id="week-label" aria-live="polite" style="display: none !important"></p>
+    </div>
+  <main class="board" id="board"></main>
+
+  <section class="calendar" id="calendar" aria-label="Calendário de tarefas" hidden>
+    <div class="cal-head">
+      <button type="button" id="cal-today">Hoje</button>
+      <button type="button" class="arrow" id="cal-prev" aria-label="Mês anterior">‹</button>
+      <span class="cal-menu cal-mmenu"><p class="cal-label" id="cal-label" aria-live="polite" role="button" tabindex="0" aria-haspopup="listbox" aria-expanded="false" title="Escolher o mês"></p><div class="cal-pop cal-mpop" id="cal-mpop" role="listbox" hidden></div></span>
+      <button type="button" class="arrow" id="cal-next" aria-label="Próximo mês">›</button>
+      <span class="cal-menu cal-ymenu"><button type="button" id="cal-year" aria-haspopup="listbox" aria-expanded="false" aria-label="Escolher o ano" title="Escolher o ano"></button><div class="cal-pop cal-ypop" id="cal-ypop" role="listbox" hidden></div></span>
+      <span class="cal-menu"><button type="button" class="arrow" id="cal-more" aria-haspopup="menu" aria-expanded="false" aria-label="Mais opções" title="Mais opções"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><g fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></g></svg></button><div class="cal-pop" id="cal-pop" role="menu" hidden><button type="button" role="menuitem" id="cal-clear-month">Limpar este mês</button></div></span>
+    </div>
+    <div class="cal-dow" id="cal-dow"></div>
+    <div class="cal-grid" id="cal-grid" role="group" aria-label="Dias do mês"></div>
+    <div class="cal-stats" id="cal-stats" aria-label="Quantidade de tarefas"></div>
+  </section>
+
+  <section class="dash" id="dash" aria-label="Painel de estatísticas" hidden>
+    <div class="set-card dash-chart-card">
+    <div class="dash-bar">
+      <label class="dash-f"><span class="lab">Período</span>
+        <select id="dash-period">
+          <option value="year">Ano</option>
+          <option value="month">Mês</option>
+          <option value="week" selected>Semana</option>
+          <option value="day">Dia</option>
+        </select>
+      </label>
+      <label class="dash-f"><span class="lab">Status</span>
+        <select id="dash-status">
+          <option value="all" selected>Todos</option>
+          <option value="pending">Pendente</option>
+          <option value="done">Concluídas</option>
+          <option value="late">Atrasadas</option>
+          <option value="open">Não concluídas</option>
+        </select>
+      </label>
+      <div class="dash-f" id="dash-pctl"></div>
+    </div>
+      <div id="dash-chart"></div>
+    </div>
+  </section>
+
+  <section class="settings" id="look" aria-label="Configurações" hidden>
+   <div class="tools">
+      <h2>Configurações</h2>
+      <button type="button" class="look-btn" id="install-app" hidden>Instalar app</button>
+    </div>
+    <div class="set-grid">
+  <div class="set-col">
+      <div class="set-card">
+        <p class="look-title">Aparência</p>
+        <div class="set-sub">
+        <p class="look-title sub">Tema</p>
+
+        <div class="skins" role="group" aria-label="Tema">
+          <button type="button" class="skin-opt" data-skin="padrao" aria-pressed="true"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="nm">Padrão</span><span class="sub">Limpo, neutro e moderno</span></button>
+          <button type="button" class="skin-opt" data-skin="fofo" aria-pressed="false"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="nm">Fofinho</span><span class="sub">Meigo, fofinho e aconchegante</span></button>
+          <button type="button" class="skin-opt" data-skin="tech" aria-pressed="false"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="nm">Tech</span><span class="sub">Visual tech e nostálgico</span></button>
+          <button type="button" class="skin-opt" data-skin="glass" aria-pressed="false"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="nm">Translúcido</span><span class="sub">Vidro translúcido, brilho e movimento fluido</span></button>
+          <button type="button" class="skin-opt" data-skin="floresta" aria-pressed="false"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="nm">Floresta</span><span class="sub">Verde, calmo e natural</span></button>
+          <button type="button" class="skin-opt" data-skin="caderno" aria-pressed="false"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="nm">Caderno</span><span class="sub">Papel pautado, tinta e post-its</span></button>
+        </div>
+        </div>
+
+        <div class="set-card" id="modo-card">
+        <div class="set-head">
+          <p class="look-title">Modo</p>
+          <button type="button" class="btn-alt sm set-toggle" id="modo-toggle" aria-controls="modo-body" aria-expanded="true"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 15l6-6 6 6"/></svg></button>
+        </div>
+        <div class="set-body" id="modo-body">
+        <div class="modes" role="group" aria-label="Modo claro ou escuro">
+          <button type="button" class="mode-opt" data-mode="auto" aria-pressed="true">Automático</button>
+          <button type="button" class="mode-opt" data-mode="light" aria-pressed="false">Claro</button>
+          <button type="button" class="mode-opt" data-mode="dark" aria-pressed="false">Escuro</button>
+        </div>
+        <p class="look-note">Automático segue o modo do seu aparelho.</p>
+        <p class="look-title">Animações</p>
+        <div class="modes two" role="group" aria-label="Animações dos temas">
+          <button type="button" class="fx-opt" data-fx="on" aria-pressed="true">Ligadas</button>
+          <button type="button" class="fx-opt" data-fx="off" aria-pressed="false">Desligadas</button>
+        </div>
+        <p class="look-note" id="fx-note"></p>
+        <p class="look-title">Tarefas concluídas</p>
+        <div class="modes two" role="group" aria-label="Ordem das tarefas concluídas">
+          <button type="button" class="fx-opt" data-ord="end" aria-pressed="false">No final do dia</button>
+          <button type="button" class="fx-opt" data-ord="keep" aria-pressed="true">Na ordem normal</button>
+        </div>
+        <p class="look-note">Com a opção ligada, as tarefas concluídas ficam sempre no final de cada dia.</p>
+        </div>
+        </div>
+
+        <div class="set-card" id="lang-card">
+          <div class="set-head">
+            <p class="look-title">Idioma</p>
+            <button type="button" class="btn-alt sm set-toggle" id="lang-toggle" aria-controls="lang-body" aria-expanded="true"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 15l6-6 6 6"/></svg></button>
+          </div>
+          <div class="set-body" id="lang-body">
+            <div class="modes" role="group" aria-label="Idioma" id="lang-opts"></div>
+            <p class="look-note">Muda apenas os textos do app. Suas tarefas e anotações não são alteradas.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="set-card" id="tutorial-card">
+        <p class="look-title">Tutorial</p>
+        <p class="look-note">Aprenda a usar o Mi.Día em poucos passos.</p>
+        <button type="button" class="btn-alt" id="tutorial-open">Abrir tutorial</button>
+      </div>
+
+     </div>
+     <div class="set-col">
+
+      <div class="set-card">
+        <p class="look-title">Notificações</p>
+        <p class="look-note" id="notif-note"></p>
+        <div class="modes two" role="group" aria-label="Notificações de horário">
+          <button type="button" class="fx-opt" data-notif="on" aria-pressed="false">Ativadas</button>
+          <button type="button" class="fx-opt" data-notif="off" aria-pressed="true">Desativadas</button>
+        </div>
+        <button type="button" class="btn-alt sm" id="notif-test" hidden>Enviar notificação de teste</button>
+      </div>
+
+      <div class="set-card" id="backup">
+        <p class="look-title">Backup e transferência</p>
+        <p class="look-note">Leve suas tarefas e configurações para outro dispositivo: baixe o arquivo aqui e envie no outro aparelho.</p>
+        <div class="fld">
+          <span class="lab">Incluir no arquivo</span>
+          <label class="pick"><input type="checkbox" id="bk-planner" checked><span>Tarefas e planner (lista de tarefas, tarefas atribuídas aos dias e cores)</span></label>
+          <label class="pick"><input type="checkbox" id="bk-settings" checked><span>Configurações (tema, modo, animações e notificações)</span></label>
+        </div>
+        <!-- <div class="fld">
+          <span class="lab">Formato</span>
+          <div class="modes two" role="group" aria-label="Formato do arquivo">
+            <button type="button" class="fx-opt" data-fmt="json" aria-pressed="true">JSON</button>
+            <button type="button" class="fx-opt" data-fmt="xml" aria-pressed="false">XML</button>
+          </div> 
+        </div> -->
+        <button type="button" class="primary" id="bk-download">Baixar arquivo</button>
+        <hr class="bk-sep">
+        <p class="look-title">Importar</p>
+        <button type="button" class="btn-alt" id="bk-upload">Escolher arquivo (.JSON)…</button>
+        <input type="file" id="bk-file" accept=".json,.xml,application/json,text/xml,application/xml" hidden>
+        <p class="look-note bk-status" id="bk-status" aria-live="polite"></p>
+      </div>
+
+      <div class="set-card" id="clear-card">
+        <p class="look-title">Limpeza</p>
+        <p class="look-note"><strong>Limpar Grade/Semanas:</strong> Remove TODAS as tarefas atribuídas aos dias, inclusive as de dias anteriores a hoje. As tarefas da lista “Suas tarefas” continuam.</p>
+        <p class="look-note"><strong>Excluir TODAS as tarefas:</strong> Exclui TODAS as tarefas de forma definitiva, tanto da grade de dias quanto da lista “Suas tarefas”.</p>
+        <button type="button" class="btn-alt sm warn" id="clear-all">Limpar Grade/Semanas</button>
+        <button type="button" class="btn-alt sm warn" id="clear-mine">Excluir TODAS as tarefas</button>
+      </div>
+     </div>
+    </div>
+  </section>
+
+  <section class="notifs" id="profile" aria-label="Perfil" hidden><div id="pf-box"></div></section>
+
+  <section class="notifs" id="notifs" aria-label="Notificações recebidas" hidden>
+    <div class="nf-tabs" role="tablist"><button type="button" data-nt="n" class="on">Notificações</button><button type="button" data-nt="l">Logs</button></div>
+    <div id="nf-pane">
+    <div class="nf-head">
+      <h2>Notificações</h2>
+      <span class="count" id="nf-count"></span>
+      <button type="button" class="btn-alt sm" id="nf-clear">Limpar histórico</button>
+    </div>
+    <div class="nf-list" id="nf-list"></div>
+    </div>
+    <div id="lg-pane" hidden>
+      <div class="nf-head"><h2>Logs</h2><span class="count" id="lg-count"></span><button type="button" class="btn-alt sm" id="lg-clear">Limpar logs</button></div>
+      <div class="lg-types" id="lg-types"></div>
+      <div class="lg-filt"><label>De <input type="datetime-local" id="lg-from"></label><label>Até <input type="datetime-local" id="lg-to"></label><button type="button" class="btn-alt sm" id="lg-reset">Limpar filtros</button></div>
+      <div class="nf-list" id="lg-list"></div>
+    </div>
+  </section>
+</div>
+
+<div class="picker" id="picker" role="dialog" aria-label="Escolher o dia" hidden></div>
+
+<div class="modal-back" id="modal-back" hidden><div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></div></div>
+
+<div class="footer"> <p>| v.ea-0.30.0 | Contato: <a id="WhatsApp" onclick="WhatsAppFraniel()" class="btn btn--primary" style="color: #f97316; padding: 0 4px 0px 4px; cursor: pointer;">@Franiel.zip</a> | 2026 | </p> </div>
+
+<script src="js/core/translate.js"></script>
+<script src="js/core/dates.js"></script>
+<script src="js/features/filters.js"></script>
+<script src="js/core/colors.js"></script>
+<script src="js/core/checklist.js"></script>
+<script src="js/core/state.js"></script>
+<script src="js/ui/pop-x.js"></script>
+<script src="js/features/game/engine.js"></script>
+<script src="js/features/game/effects.js"></script>
+<script src="js/features/game/unlocks.js"></script>
+<script src="js/features/game/ui.js"></script>
+<script src="js/features/game/history.js"></script>
+<script src="js/features/game/history.js"></script>
+<script src="js/features/logs.js"></script>
+<script src="js/core/persist.js"></script>
+<script src="js/ui/header-tray.js"></script>
+<script src="js/ui/board.js"></script>
+<script src="js/ui/color-popover.js"></script>
+<script src="js/ui/view.js"></script>
+<script src="js/ui/calendar.js"></script>
+<script src="js/core/actions.js"></script>
+<script src="js/features/dash/stats.js"></script>
+<script src="js/features/dash/popups.js"></script>
+<script src="js/features/dash/render.js"></script>
+<script src="js/features/dash/pickers.js"></script>
+<script src="js/ui/dialogs.js"></script>
+<script src="js/features/copy-week.js"></script>
+<script src="js/ui/day-menu.js"></script>
+<script src="js/ui/day-picker.js"></script>
+<script src="js/ui/modal.js"></script>
+<script src="js/ui/color-picker.js"></script>
+<script src="js/ui/editors.js"></script>
+<script src="js/ui/drag.js"></script>
+<script src="js/features/look.js"></script>
+<script src="js/ui/fx.js"></script>
+<script src="js/native/capacitor-notifications.js"></script>
+<script src="js/features/notifications.js"></script>
+<script src="js/features/push.js"></script>
+<script src="js/features/notif-toggle.js"></script>
+<script src="js/features/notif-history.js"></script>
+<script src="js/features/accounts.js"></script>
+<script src="js/features/cloud/core.js"></script>
+<script src="js/features/cloud/sync.js"></script>
+<script src="js/features/cloud/auth.js"></script>
+<script src="js/features/profile.js"></script>
+<script src="js/features/backup.js"></script>
+<script src="js/features/install.js"></script>
+<script src="js/features/tutorial.js"></script>
+<script src="js/features/install-help.js"></script>
+<script src="js/features/notif-click.js"></script>
+<script src="js/boot/init.js"></script>
+<script src="js/utils/whatsapp.js"></script>
+</body></html>

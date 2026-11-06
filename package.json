@@ -1,0 +1,26 @@
+{
+  "name": "mi-dia-android",
+  "version": "0.30.0",
+  "private": true,
+  "description": "Mi.Día Android — Capacitor shell with native Android notifications and remote Netlify updates",
+  "scripts": {
+    "sync:android": "cap sync android",
+    "open:android": "cap open android",
+    "build:android": "cd android && ./gradlew assembleDebug",
+    "build:aab": "cd android && ./gradlew bundleRelease",
+    "build:apk-release": "cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/local-notifications": "^8.3.1",
+    "@capacitor/status-bar": "^8.0.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.6.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
